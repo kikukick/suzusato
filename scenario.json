@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "title": "太陽と里見の放課後",
+    "author": "シナリオ班",
+    "version": "1.0",
+    "description": "太陽と里見が放課後にXXする話。"
+  },
+  "assets": {
+    "backgrounds": {
+      "classroom": "assets/bg/classroom.jpg",
+      "house": "assets/bg/house.png"
+    },
+    "characters": {
+      "taiyo": {
+        "icon": "assets/char/taiyo/icon.jpeg",
+        "chatBackground": "assets/bg/chat_taiyo.jpg",
+        "expressions": {
+          "A1": "assets/char/taiyo/normal.png",
+          "A2": "assets/char/taiyo/smile.png",
+          "A3": "assets/char/taiyo/mikki-.png",
+          "A4": "assets/char/taiyo/serious.png"
+        },
+        "position": { "x": "50%", "y": "45%" },
+        "scale": 0.9,
+        "flip": false,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "satomi": {
+        "icon": "assets/char/satomi/icon.jpeg",
+        "chatBackground": "assets/bg/chat_satomi.jpg",
+        "expressions": {
+          "B1": "assets/char/satomi/normal.png",
+          "B2": "assets/char/satomi/takopi.jpg",
+          "B3": "assets/char/satomi/shock.png"
+        },
+        "position": { "x": "50%", "y": "25%" },
+        "scale": 0.4,
+        "flip": false,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "hujita": {
+        "icon": "assets/char/hujita/icon.jpeg",
+        "chatBackground": "assets/bg/chat_hujita.jpg",
+        "expressions": {
+          "C1": "assets/char/hujita/normal.png",
+          "C2": "assets/char/hujita/laugh.png",
+          "C3": "assets/char/hujita/shock.png"
+        },
+        "position": { "x": "50%", "y": "25%" },
+        "scale": 0.4,
+        "flip": true,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      },
+      "narrator": {
+        "icon": "assets/char/narrator/icon.jpeg",
+        "chatBackground": "assets/bg/chat_narrator.jpg",
+        "expressions": {
+          "C1": "assets/char/narrator/normal.png",
+          "C2": "assets/char/narrator/laugh.png",
+          "C3": "assets/char/narrator/shock.png"
+        },
+        "position": { "x": "50%", "y": "25%" },
+        "scale": 0.4,
+        "flip": true,
+        "anchorX": 0.5,
+        "anchorY": 0.5
+      }
+    }
+    
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "bg": "classroom",
+      "lines": [
+        { "ex": "------------- シーン開始 -------------" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "よお太陽、昨日の夜の戦、覚えてるか？" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "-", "Message": "intro1" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "いや///" },
+        { "name": "太陽", "char": "taiyo", "face": "A3", "text": "あれは前日の夜のベッドで腰やられてたから///" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "まさか、今日もやるの？///" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "太陽の家でいいよな?" },
+        {
+          "choices": [
+            { "text": "もちろん！早くやろうよ///", "next": "game_start" },
+            { "text": "やめとこう…", "next": "no_game" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game_start",
+      "bg": "house",
+      "lines": [
+        { "ex": "------------- 太陽の家での修羅場 -------------" },
+        { "name": "里見", "char": "satomi", "face": "B2", "text": "なんかこの部屋臭くない？" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "どんな？" },
+        { "name": "里見", "char": "satomi", "face": "B2", "text": "生臭いイカの匂い" },
+        { "name": "里見", "char": "satomi", "face": "B2", "text": "でも昨日は出してないはず..." },
+        { "name": "里見", "char": "satomi", "face": "B2", "text": "まさか..." },
+        { "name": "里見", "char": "satomi", "face": "B2", "text": "他の男に体を売ったのか!?" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "だって里見くんが私を満足させれなかったんだもん！！" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "なるほどな" },
+        { "name": "ナレーター", "char": "narrator", "face": "B1", "text": "里見は怒っているようだ" },
+        {
+          "choices": [
+            { "text": "逃げる", "next": "逃げる" },
+            { "text": "逆レ", "next": "逆レ" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no_game",
+      "bg": "classroom",
+      "lines": [
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "今日はやめとくわ" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "親いるし" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "ちぇっ、つまんねーの" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "また今度掘らしてやるよから許せカス" }
+      ]
+    },
+    {
+      "id": "逃げる",
+      "bg": "house",
+      "lines": [
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "あ！用事思い出した！今日は解散ってことにしてくれない！？" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "え？いいと思ってんのか？" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "この里見様がお前を逃がしてあげると思ってるのかって聞いてんだよ" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "このガバ穴！！！！" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "やぁだああああよおおおおぉ" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "ウヘヘヘ" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "とりま目隠しして自分で四つん這いになって後ろ向いてくれたらいいよ" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "まぁ...悪くないかもな"  }
+      ]
+    },
+
+    {
+      "id": "逆レ",
+      "bg": "house",
+      "lines": [
+        {  "name": "鈴木", "char": "suzkui", "face": "A1", "text": "でも..." },
+        {  "name": "鈴木", "char": "suzkui", "face": "A1", "text": "里見くんが私を満足させてくれなかったのが悪いんでしょ？" },
+        {  "name": "里見", "char": "suzkui", "face": "A1", "text": "は？" },
+        {  "name": "里見", "char": "suzkui", "face": "A1", "text": "は？" },
+        {  "name": "ナレーター ", "char": "narrator", "face": "A1", "text": "-----回送-----" },
+        {
+          "choices": [
+            { "text": "もちろん！早くやろうよ///", "next": "game_start" },
+            { "text": "やめとこう…", "next": "no_game" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no_game",
+      "bg": "classroom",
+      "lines": [
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "今日はやめとくわ" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "親いるし" },
+        { "name": "里見", "char": "satomi", "face": "B1", "text": "ちぇっ、つまんねーの" },
+        { "name": "太陽", "char": "taiyo", "face": "A1", "text": "また今度掘らしてやるよから許せカス" }
+      ]
+    }
+  ]
+}
